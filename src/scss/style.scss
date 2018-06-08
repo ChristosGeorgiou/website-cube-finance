@@ -1,5 +1,14 @@
 @import "./node_modules/bootstrap/scss/bootstrap";
 $color:#019bd9;
+section {
+  .container {
+    @extend .w-75;
+  }
+  h2 {
+    @extend .text-center;
+  }
+}
+
 .topbar {
   @extend .text-white;
   @extend .p-2;
@@ -7,9 +16,9 @@ $color:#019bd9;
 }
 
 .carousel {
-  height:550px;
-  .carousel-item{
-    height:550px;
+  height: 550px;
+  .carousel-item {
+    height: 550px;
   }
   .carousel-caption {
     top: 40%;
@@ -39,16 +48,30 @@ $color:#019bd9;
     border-radius: 25px;
   }
   .carousel-control-prev {
-    margin-left:50px;
+    margin-left: 50px;
   }
   .carousel-control-next {
-    margin-right:50px;
+    margin-right: 50px;
   }
 }
 
-.services{
-  .service{
-    @extend .w-50;
-    @extend .mx-auto;
+.services {
+  h4 {
+    @extend .text-center;
+  }
+  .services-wrapper {
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .flex-wrap;
+    .service {
+      @extend .p-4;
+      @extend .w-50;
+      h4 {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+    }
   }
 }
+
+.divider {}
