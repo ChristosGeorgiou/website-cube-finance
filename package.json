@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
-    "gulp-cg-toolkit": "2.2.0"
+    "gulp-cg-toolkit": "2.4.0"
   }
 }
