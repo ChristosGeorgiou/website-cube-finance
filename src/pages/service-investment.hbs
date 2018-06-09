@@ -1,0 +1,28 @@
+{{>_start}} {{>topbar}} {{>header menuServices=true}}
+
+<section class="p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <h1 class="display-4 mb-4">{{_base.services.2.label}}</h1>
+        <img class="img-fluid img-thumbnail mb-4" src="/img/banners/h3-sl.jpg" alt="Second slide">
+        <p>{{_base.services.2.description}}</p>
+        <ul>
+          {{#each _base.services.2.items}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col-4">
+        <div class="list-group">
+          {{#each _base.services}}
+          <a class="list-group-item" href="{{link}}">{{label}}</a>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{{>footer}}{{>_end}}

@@ -1,8 +1,9 @@
-@import "./node_modules/bootstrap/scss/bootstrap";
 $color:#019bd9;
+$theme-colors: ( "primary": $color);
+@import "./node_modules/bootstrap/scss/bootstrap";
 section {
   .container {
-    @extend .w-75;
+    // @extend .w-75;
   }
   h2 {
     @extend .text-center;
@@ -15,13 +16,22 @@ section {
   background: $color;
 }
 
+.header {
+  .menu {
+    .btn {
+      border: none;
+      font-weight: 300;
+    }
+  }
+}
+
 .carousel {
   height: 550px;
   .carousel-item {
     height: 550px;
   }
   .carousel-caption {
-    top: 40%;
+    top: 30%;
     bottom: auto;
     left: 20%;
     right: auto;
@@ -56,6 +66,8 @@ section {
 }
 
 .services {
+  @extend .p-5;
+  background: #f4f6f8;
   h4 {
     @extend .text-center;
   }
@@ -64,11 +76,39 @@ section {
     @extend .justify-content-center;
     @extend .flex-wrap;
     .service {
-      @extend .p-4;
-      @extend .w-50;
-      h4 {
-        font-size: 2rem;
-        font-weight: 300;
+      @extend .card;
+      @extend .border-primary;
+      margin: 1%;
+      width: 30%;
+      text-decoration: none;
+      .service-body {
+        @extend .card-body;
+        @extend .p-4;
+        @extend .text-dark;
+        @extend .text-center;
+        h4 {
+          font-size: 1.2rem;
+          .fa {
+            @extend .m-2;
+            font-size: 2rem;
+            @extend .text-primary;
+          }
+        }
+        p {
+          @extend .text-secondary;
+        }
+      }
+      &:hover {
+        background-color: $color;
+        .service-body {
+          @extend .text-white;
+          .fa {
+            @extend .text-white;
+          }
+          p {
+            @extend .text-white;
+          }
+        }
       }
     }
   }

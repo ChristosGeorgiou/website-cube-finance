@@ -1,0 +1,39 @@
+<section class="header border-bottom" style="height:100px">
+  <div class="container d-flex align-items-center h-100">
+    <div class="logo h-100">
+      <a href="index2.html">
+        <img class="h-100" src="/img/logo.jpg">
+      </a>
+    </div>
+    <ul class="menu ml-auto list-inline m-0">
+      <li class="list-inline-item">
+        <a href="index2.html" class="btn btn-lg btn-outline-primary {{#if menuIndex}}active{{/if}}">
+          Αρχική
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a href="profile.html" class="btn btn-lg btn-outline-primary {{#if menuProfile}}active{{/if}}">
+          Εταιρεία
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <div class="dropdown">
+          <button class="btn btn-lg btn-outline-primary {{#if menuServices}}active{{/if}} dropdown-toggle" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown">
+            Υπηρεσίες
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            {{#each _base.services}}
+            <a class="dropdown-item" href="{{link}}">{{label}}</a>
+            {{/each}}
+          </div>
+        </div>
+      </li>
+      <li class="list-inline-item">
+        <a href="contact.html" class="btn btn-lg btn-outline-primary {{#if menuContact}}active{{/if}}">
+          Επικοινωνία
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
