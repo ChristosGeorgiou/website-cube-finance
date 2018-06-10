@@ -1,0 +1,6 @@
+<div class="list-group">
+  {{#each _base.services}}
+  <a class="list-group-item d-flex align-items-center {{#eq id ../selected}}active{{/eq}}" href="{{link}}">
+    <span class="{{icon}} fa-2x mr-3"></span> <span>{{label}}</span></a>
+  {{/each}}
+</div>

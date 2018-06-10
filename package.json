@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
-    "gulp-cg-toolkit": "2.4.1"
+    "gulp-cg-toolkit": "2.4.1",
+    "handlebars-helpers": "^0.10.0"
   }
 }

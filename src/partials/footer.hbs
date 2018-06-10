@@ -1,10 +1,49 @@
 <section class="footer bg-dark text-white p-5">
   <div class="container">
-    <div class="text-center lead">
-      cube.finance © 2018 - All rights reserved. </div>
-    <div class="text-center text-secondary">developed by
-      <a class="text-secondary" href="http://cgeosoft.com" target="_blank">cgeosoft</a>
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Κύβος</h5>
+        <div>
+          Χρηματοοικονομικοί Σύμβουλοι
+          <br>©2018 - All rights reserved.
+        </div>        
+        <div class="m-2">
+          {{#each _base.social}}
+          <a href="{{link}}" class="btn btn-sm btn-primary rounded-circle mr-1">
+            <span class="fa fa-{{icon}} fa-fw"></span>
+          </a>
+          {{/each}}
+        </div>
+        <hr class="border-secondary">
+        <div class="text-secondary">developed by
+          <a class="text-secondary" href="http://cgeosoft.com" target="_blank">cgeosoft</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h5>Έδρα</h5>
+        <p>
+          <b>001-1234-66666</b>
+          <br>
+          <a href="mailto:info.us@consultech.co">info.us@consultech.co</a>
+          <br>
+        </p>
+        <p>
+          <b>40 Baria Sreet 133/2</b>
+          <br> NewYork City, US</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Newsletter</h5>
+        <form action="{{_base.settings.mailchimp.url}}" method="post" target="_blank" novalidate>
+          <div class="form-group">
+            <input name="EMAIL" type="email" class="form-control" placeholder="Email">
+          </div>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_467f02e38020bf5fdd71f47f7_344ae09693" tabindex="-1" value="">
+          </div>
+          <div class="form-group text-right">
+            <input type="submit" value="Εγγραφή" name="subscribe" class="btn btn-outline-primary">
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-  </div>
 </section>

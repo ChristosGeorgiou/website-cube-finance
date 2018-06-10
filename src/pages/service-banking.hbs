@@ -1,4 +1,4 @@
-{{>_start}} {{>topbar}} {{>header menuServices=true}}
+{{>_start title=_base.services.3.label}} {{>topbar}} {{>header menuServices=true}}
 
 <section class="p-5">
   <div class="container">
@@ -14,11 +14,7 @@
         </ul>
       </div>
       <div class="col-4">
-        <div class="list-group">
-          {{#each _base.services}}
-          <a class="list-group-item" href="{{link}}">{{label}}</a>
-          {{/each}}
-        </div>
+        {{>services-listgroup selected=_base.services.3.id}}
       </div>
     </div>
 
